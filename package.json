@@ -9,7 +9,7 @@
   },
   "scripts": {
     "pretest": "gulp features",
-    "test": "protractor ./test/e2e/conf.js",
+    "test": "protractor ./test/conf.js",
     "posttest": "node reports/report.js"
   },
   "devDependencies": {

@@ -2,11 +2,11 @@ var gulp = require('gulp');
 var del = require('del');
 let vsts = require('vso-node-api');
 var fs = require('fs');
-var FilePath = './test/e2e/features/us.feature';
+var FilePath = './test/features/us.feature';
 var encode = 'utf8';
 
 gulp.task('clean-test', function () {
-    return del(['./test/e2e/features/*.feature', './reports/cucumber*']);
+    return del(['./test/features/*.feature', './reports/cucumber*']);
 });
 
 gulp.task('features', ['clean-test'], function () {
