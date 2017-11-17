@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - '0.12'
+  - '8'
 addons:
   sauce_connect:
     username: ernestos_barbosa
-    access_key: access
+    access_key: 11cf801b-8551-438d-9a13-188ae6c506ae
 cache:
   directories:
     - node_modules
