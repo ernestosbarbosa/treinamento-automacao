@@ -1,16 +1,17 @@
-var { element, by, ElementFinder } = require('protractor')
+var { browser, element, by, ElementFinder } = require('protractor')
 var { Common } = require('../support/common');
 var { expect } = require('chai')
 var utils = new Common();
 
-class InicioPage {
+class AngularPage {
 
     constructor() {
-        this.page = "inicio";
+        this.page = "angular";
         this.todo = "todo";
         this.add = "add";
+        this.lista = "lista";
     }
-    isInicioPage(){
+    isAngularPage(){
         this.existeAdd();
         this.existeTodo();
     }
@@ -28,16 +29,25 @@ class InicioPage {
             })
         });
     }
-    preencheTodo(text) {
+    preencheTodo(int) {
         return utils.esperaElemento(this.page, this.todo).then(() => {
-            return utils.elemento(this.page, this.todo).sendKeys(text);
+            return utils.elemento(this.page, this.todo).sendKeys("Tarefa "+int);
+        }).then(()=>{
+            return this.clickAdd();
         })
     }
-    add() {
+    clickAdd() {
         return utils.esperaElemento(this.page, this.add).then(() => {
             return utils.elemento(this.page, this.add).click();
         })
     }
+    validaLista(int){
+        return utils.esperaElemento(this.page, this.lista).then(() => {
+            return utils.elementos(this.page, this.lista).count().then((value)=>{
+                expect(value).to.eql(3);
+            });
+        })
+    }
 }
 
-exports.InicioPage = InicioPage;
+exports.AngularPage = AngularPage;

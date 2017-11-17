@@ -1,7 +1,0 @@
-inicio:
-  todo:
-    value: "todoList.todoText"
-    tipo_busca: "MODEL"
-  add:
-    value: "[ng-submit='todoList.addTodo()'] > input:nth-child(1)"
-    tipo_busca: "CSS"

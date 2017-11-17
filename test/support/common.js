@@ -6,7 +6,7 @@ var { browser, element, by, ElementFinder, ElementArrayFinder, until, ExpectedCo
 class Common {
 
     page(page) {
-        return safeLoad(readFileSync(resolve("./test/e2e/elements/" + page + "Page.yml"), 'utf8'), { schema: JSON_SCHEMA });
+        return safeLoad(readFileSync(resolve("./test/elements/" + page + "Page.yml"), 'utf8'), { schema: JSON_SCHEMA });
     }
     elemento(page, el) {
         switch (this.page(page)[page][el]['tipo_busca']) {
@@ -20,6 +20,8 @@ class Common {
                 return element(by.xpath(this.page(page)[page][el]['value']))
             case TIPO_BUSCA.MODEL:
                 return element(by.model(this.page(page)[page][el]['value']))
+            case TIPO_BUSCA.REPEAT:
+                return element(by.repeater(this.page(page)[page][el]['value']))
             default:
                 break;
         }
@@ -46,6 +48,10 @@ class Common {
                 return browser.wait(ExpectedConditions.presenceOf(element(by.model(this.page(page)[page][el]['value'])))).then(result => {
                     return result;
                 })
+            case TIPO_BUSCA.REPEAT:
+                return browser.wait(ExpectedConditions.presenceOf(element(by.repeater(this.page(page)[page][el]['value'])))).then(result => {
+                    return result;
+                })
             default:
                 break;
         }
@@ -62,6 +68,8 @@ class Common {
                 return element.all(by.xpath(this.page(page)[page][el]['value']))
             case TIPO_BUSCA.MODEL:
                 return element.all(by.model(this.page(page)[page][el]['value']))
+            case TIPO_BUSCA.REPEAT:
+                return element.all(by.repeater(this.page(page)[page][el]['value']))
             default:
                 break;
         }
@@ -74,7 +82,8 @@ let TIPO_BUSCA = {
     CLASS: "CLASS",
     ID: "ID",
     XPATH: "XPATH",
-    MODEL: "MODEL"
+    MODEL: "MODEL",
+    REPEAT: "REPEAT"
 }
 
 exports.Common = Common;

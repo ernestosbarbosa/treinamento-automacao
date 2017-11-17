@@ -14,7 +14,7 @@ exports.config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     specs: [
-        '../**/*.feature'
+        './**/*.feature'
     ],
     cucumberOpts: {
         format: ['json:reports/cucumber_report.json'],

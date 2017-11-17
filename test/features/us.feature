@@ -1,6 +1,6 @@
 #language: pt 
 #encoding: utf-8 
-Funcionalidade: [Inicio] Testando algo
+Funcionalidade: [Inicio] Navegando no site AngularJS
 Como Usuário
 Desejo cadastrar minhas tarefas
 Para que as tenha mapeadas
