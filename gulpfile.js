@@ -4,18 +4,19 @@ var vsts = require('vso-node-api');
 var fs = require('fs');
 var FilePath = './test/features/us.feature';
 var encode = 'utf8';
+var collectionUrl = "https://ernestosbarbosa.visualstudio.com/";
+var token = "zz6kcrxzugwmlk3xjeqodsjfsddqutdx2klrqhmf3ycl45xjicbq";
+var project = "treinamento-automacao";
+var authHandler = vsts.getPersonalAccessTokenHandler(token);
+var connect = new vsts.WebApi(collectionUrl, authHandler);
+var testId = 91;
 
 gulp.task('clean-test', function () {
     return del(['./test/features/*.feature', './reports/cucumber*']);
 });
 
 gulp.task('features', ['clean-test'], function () {
-    var collectionUrl = "https://ernestosbarbosa.visualstudio.com/";
-    var token = "zz6kcrxzugwmlk3xjeqodsjfsddqutdx2klrqhmf3ycl45xjicbq";
-    var project = "treinamento-automacao";
-    var authHandler = vsts.getPersonalAccessTokenHandler(token);
-    var connect = new vsts.WebApi(collectionUrl, authHandler);
-    return connect.getWorkItemTrackingApi().getWorkItem(91).then((workItem) => {
+    return connect.getWorkItemTrackingApi().getWorkItem(testId).then(workItem => {
         var str = "#language: pt \n" +
             "#encoding: utf-8 \n" +
             "Funcionalidade: " + workItem.fields['System.Title'] + "\n" +

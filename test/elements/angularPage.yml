@@ -1,4 +1,4 @@
-inicio:
+angular:
   todo:
     value: "todoList.todoText"
     tipo_busca: "MODEL"
