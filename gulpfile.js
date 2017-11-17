@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var del = require('del');
-let vsts = require('vso-node-api');
+var vsts = require('vso-node-api');
 var fs = require('fs');
 var FilePath = './test/features/us.feature';
 var encode = 'utf8';
@@ -10,13 +10,13 @@ gulp.task('clean-test', function () {
 });
 
 gulp.task('features', ['clean-test'], function () {
-    let collectionUrl = "https://ernestosbarbosa.visualstudio.com/";
-    let token = "zz6kcrxzugwmlk3xjeqodsjfsddqutdx2klrqhmf3ycl45xjicbq";
-    let project = "treinamento-automacao";
-    let authHandler = vsts.getPersonalAccessTokenHandler(token);
-    let connect = new vsts.WebApi(collectionUrl, authHandler);
+    var collectionUrl = "https://ernestosbarbosa.visualstudio.com/";
+    var token = "zz6kcrxzugwmlk3xjeqodsjfsddqutdx2klrqhmf3ycl45xjicbq";
+    var project = "treinamento-automacao";
+    var authHandler = vsts.getPersonalAccessTokenHandler(token);
+    var connect = new vsts.WebApi(collectionUrl, authHandler);
     return connect.getWorkItemTrackingApi().getWorkItem(91).then(workItem => {
-        let str = "#language: pt \n" +
+        var str = "#language: pt \n" +
             "#encoding: utf-8 \n" +
             "Funcionalidade: " + workItem.fields['System.Title'] + "\n" +
             convertHtmlToText(workItem.fields['AgileTest.Contexto']) + "\n" +
