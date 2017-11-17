@@ -1,0 +1,193 @@
+[
+  {
+    "description": "Como Usuário\nDesejo cadastrar minhas tarefas\nPara que as tenha mapeadas",
+    "keyword": "Funcionalidade",
+    "name": "[Inicio] Navegando no site AngularJS",
+    "line": 3,
+    "id": "[inicio]-navegando-no-site-angularjs",
+    "tags": [],
+    "uri": "test\\features\\us.feature",
+    "elements": [
+      {
+        "id": "[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Cadastrar lista de tarefas",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test\\support\\world.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25891
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que acessei a pagina inicial",
+            "match": {
+              "location": "test\\steps\\steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 10,
+            "name": "preenchi 1 tarefas",
+            "match": {
+              "location": "test\\steps\\steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2733
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 11,
+            "name": "a lista deve exibir todos os 1 campos",
+            "match": {
+              "location": "test\\steps\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5162
+            }
+          }
+        ]
+      },
+      {
+        "id": "[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Cadastrar lista de tarefas",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test\\support\\world.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22092
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que acessei a pagina inicial",
+            "match": {
+              "location": "test\\steps\\steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 10,
+            "name": "preenchi 2 tarefas",
+            "match": {
+              "location": "test\\steps\\steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2002
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 11,
+            "name": "a lista deve exibir todos os 2 campos",
+            "match": {
+              "location": "test\\steps\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5138
+            }
+          }
+        ]
+      },
+      {
+        "id": "[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Cadastrar lista de tarefas",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test\\support\\world.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21945
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que acessei a pagina inicial",
+            "match": {
+              "location": "test\\steps\\steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 10,
+            "name": "preenchi 3 tarefas",
+            "match": {
+              "location": "test\\steps\\steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1947
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 11,
+            "name": "a lista deve exibir todos os 3 campos",
+            "match": {
+              "location": "test\\steps\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5150
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
