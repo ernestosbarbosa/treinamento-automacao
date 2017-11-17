@@ -9,10 +9,10 @@ defineSupportCode(({ Given, Then, When }) => {
         return await angularPage.isAngularPage();
     })
     When('preenchi {int} tarefas', async function (int) {
-        return await angularPage.preencheTodo(int);
+        return await angularPage.preencheTodoText(int);
     });
     Then('a lista deve exibir todos os {int} campos', async function (int) {
         browser.sleep(5000);
-        return await angularPage.validaLista(int);
+        return await angularPage.validateList(int);
     });
 })

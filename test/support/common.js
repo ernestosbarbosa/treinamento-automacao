@@ -8,7 +8,8 @@ class Common {
     page(page) {
         return safeLoad(readFileSync(resolve("./test/elements/" + page + "Page.yml"), 'utf8'), { schema: JSON_SCHEMA });
     }
-    elemento(page, el) {
+
+    element(page, el) {
         switch (this.page(page)[page][el]['tipo_busca']) {
             case TIPO_BUSCA.CSS:
                 return element(by.css(this.page(page)[page][el]['value']))
@@ -26,7 +27,7 @@ class Common {
                 break;
         }
     }
-    esperaElemento(page, el) {
+    waitElement(page, el) {
         switch (this.page(page)[page][el]['tipo_busca']) {
             case TIPO_BUSCA.CSS:
                 return browser.wait(ExpectedConditions.presenceOf(element(by.css(this.page(page)[page][el]['value'])))).then(result => {
@@ -56,7 +57,7 @@ class Common {
                 break;
         }
     }
-    elementos(page, el) {
+    elements(page, el) {
         switch (this.page(page)[page][el]['tipo_busca']) {
             case TIPO_BUSCA.CSS:
                 return element.all(by.css(this.page(page)[page][el]['value']))

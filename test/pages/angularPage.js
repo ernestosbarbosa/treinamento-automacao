@@ -4,46 +4,45 @@ var { expect } = require('chai')
 var utils = new Common();
 
 class AngularPage {
-
     constructor() {
         this.page = "angular";
-        this.todo = "todo";
-        this.add = "add";
-        this.lista = "lista";
+        this.todoText = "todo";
+        this.addButton = "add";
+        this.listIteration = "lista";
     }
     isAngularPage(){
-        this.existeAdd();
-        this.existeTodo();
+        this.existsAddButton();
+        this.existsTodoText();
     }
-    existeTodo() {
-        return utils.esperaElemento(this.page, this.todo).then(() => {
-            return utils.elemento(this.page, this.todo).isPresent().then((value) => {
+    existsTodoText() {
+        return utils.waitElement(this.page, this.todoText).then(() => {
+            return utils.element(this.page, this.todoText).isPresent().then((value) => {
                 expect(value).to.be.true;
             });
         })
     }
-    existeAdd() {
-        return utils.esperaElemento(this.page, this.add).then(() => {
-            return utils.elemento(this.page, this.add).isPresent().then((value) => {
+    existsAddButton() {
+        return utils.waitElement(this.page, this.addButton).then(() => {
+            return utils.element(this.page, this.addButton).isPresent().then((value) => {
                 expect(value).to.be.true;
             })
         });
     }
-    preencheTodo(int) {
-        return utils.esperaElemento(this.page, this.todo).then(() => {
-            return utils.elemento(this.page, this.todo).sendKeys("Tarefa "+int);
+    preencheTodoText(int) {
+        return utils.waitElement(this.page, this.todoText).then(() => {
+            return utils.element(this.page, this.todoText).sendKeys("Tarefa "+int);
         }).then(()=>{
-            return this.clickAdd();
+            return this.clickAddButton();
         })
     }
-    clickAdd() {
-        return utils.esperaElemento(this.page, this.add).then(() => {
-            return utils.elemento(this.page, this.add).click();
+    clickAddButton() {
+        return utils.waitElement(this.page, this.addButton).then(() => {
+            return utils.element(this.page, this.addButton).click();
         })
     }
-    validaLista(int){
-        return utils.esperaElemento(this.page, this.lista).then(() => {
-            return utils.elementos(this.page, this.lista).count().then((value)=>{
+    validateList(int){
+        return utils.waitElement(this.page, this.listIteration).then(() => {
+            return utils.elements(this.page, this.listIteration).count().then((value)=>{
                 expect(value).to.eql(3);
             });
         })
