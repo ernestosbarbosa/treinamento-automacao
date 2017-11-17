@@ -15,7 +15,7 @@ gulp.task('features', ['clean-test'], function () {
     var project = "treinamento-automacao";
     var authHandler = vsts.getPersonalAccessTokenHandler(token);
     var connect = new vsts.WebApi(collectionUrl, authHandler);
-    return connect.getWorkItemTrackingApi().getWorkItem(91).then(workItem => {
+    return connect.getWorkItemTrackingApi().getWorkItem(91).then((workItem) => {
         var str = "#language: pt \n" +
             "#encoding: utf-8 \n" +
             "Funcionalidade: " + workItem.fields['System.Title'] + "\n" +
