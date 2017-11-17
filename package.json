@@ -1,0 +1,29 @@
+{
+  "name": "testewpa",
+  "version": "0.0.1",
+  "author": "jose.barbosa",
+  "private": true,
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "scripts": {
+    "pretest": "gulp features",
+    "test": "protractor ./test/e2e/conf.js",
+    "posttest": "node reports/report.js"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cucumber": "~3.0.2",
+    "cucumber-html-reporter": "~3.0.3",
+    "del": "^3.0.0",
+    "galenframework-cli": "~2.3.5",
+    "gulp": "^3.9.1",
+    "gulp-cli": "~1.4.0",
+    "js-yaml": "~3.10.0",
+    "protractor": "~5.1.2",
+    "protractor-cucumber-framework": "~4.0.8",
+    "selenium-webdriver": "~3.5.0",
+    "vso-node-api": "^6.2.8-preview"
+  }
+}
