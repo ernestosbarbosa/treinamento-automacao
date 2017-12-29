@@ -17,7 +17,7 @@ exports.config = {
         './**/*.feature'
     ],
     cucumberOpts: {
-        format: ['json:reports/cucumber_report.json'],
+        format: ['json:reports/cucumber_report.json', 'junit:reports/cucumber_report.xml'],
         require: ['./elements/**/*.js', './steps/**/*.js', './support/**/*.js', './pages/**/*.js']
     },
     baseUrl: "https://angularjs.org/",
