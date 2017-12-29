@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" tests="3" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="test\features\us.feature">
+            </property>
+        </properties>
+        <testcase name="Dado que acessei a pagina inicial" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="5.3e-8">
+        </testcase>
+        <testcase name="Quando preenchi 1 tarefas" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="0.000002323">
+        </testcase>
+        <testcase name="Então a lista deve exibir todos os 1 campos" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="0.000005216">
+        </testcase>
+    </testsuite>
+    <testsuite name="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" tests="3" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="test\features\us.feature">
+            </property>
+        </properties>
+        <testcase name="Dado que acessei a pagina inicial" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="1.1e-8">
+        </testcase>
+        <testcase name="Quando preenchi 2 tarefas" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="0.000001793">
+        </testcase>
+        <testcase name="Então a lista deve exibir todos os 2 campos" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="0.000005229">
+        </testcase>
+    </testsuite>
+    <testsuite name="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" tests="3" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="test\features\us.feature">
+            </property>
+        </properties>
+        <testcase name="Dado que acessei a pagina inicial" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="9e-9">
+        </testcase>
+        <testcase name="Quando preenchi 3 tarefas" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="0.000001554">
+        </testcase>
+        <testcase name="Então a lista deve exibir todos os 3 campos" classname="[inicio]-navegando-no-site-angularjs;cadastrar-lista-de-tarefas" time="0.000005217">
+        </testcase>
+    </testsuite>
+</testsuites>

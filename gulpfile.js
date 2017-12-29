@@ -12,7 +12,8 @@ var connect = new vsts.WebApi(collectionUrl, authHandler);
 var testId = 91;
 
 gulp.task('clean-test', function () {
-    return del(['./test/features/*.feature', './reports/cucumber*']);
+    // return del(['./test/features/*.feature', './reports/cucumber*']);
+    return del(['./test/features/*.feature']);
 });
 
 gulp.task('features', ['clean-test'], function () {

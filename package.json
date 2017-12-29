@@ -10,7 +10,7 @@
   "scripts": {
     "pretest": "gulp features",
     "test": "protractor ./test/conf.js",
-    "posttest": "node reports/report.js"
+    "posttest": "cat reports/cucumber_report.json | ./node_modules/.bin/cucumber-junit > reports/cucumber_report.xml && node reports/report.js"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -24,5 +24,8 @@
     "protractor-cucumber-framework": "~4.0.8",
     "selenium-webdriver": "~3.5.0",
     "vso-node-api": "^6.2.8-preview"
+  },
+  "dependencies": {
+    "cucumber-junit": "^1.7.1"
   }
 }
